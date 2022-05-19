@@ -21,11 +21,11 @@ docker compose --env-file .env up
 ### Entrar dentro del contenedor:
 
 ```
-docker-compose exec postgres bash
+docker-compose exec [nombre del servicio/contenedor] bash
 ```
 
 dentro del contenedor podemos conectarnos a postgress de la siguiente manera:
 
 ```
-psql -h localhost -d reppi -U admin
+mysql -h localhost -u servero -p
 ```
