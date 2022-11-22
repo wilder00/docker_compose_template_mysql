@@ -1,14 +1,15 @@
 version: '3.3'
 services:
   mysql5.7:
+    container_name: mysql8
     #image: mysql:5.7
-    image: mysql:5.7
+    image: mysql:8.0
     restart: always
     env_file:
       - .env
     environment:
       MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      #MYSQL_ALLOW_EMPTY_PASSWORD: true
       # So you don't have to use root, but you can if you like
       MYSQL_USER: ${DB_USER}
       # You can use whatever password you like
